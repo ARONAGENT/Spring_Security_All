@@ -31,6 +31,10 @@ This project covers the implementation of Spring Security with JWT authenticatio
 4. **Spring Security Web Configuration - SecurityFilterChain**
    - Configuring `SecurityFilterChain` using Java configuration.
    - Defining security rules for endpoints.
+   **Add Custom Security Filter -> Logging Filter**
+     *Execution->*
+     ![19 LoggingFilter Add In SecurityFilterChain-- Working Fine](https://github.com/user-attachments/assets/fab314ba-6c58-4643-b262-54ddc15ca05f)
+
 
 5. **Understanding JWT (JSON Web Token)**
    - Structure and purpose of JWT.
@@ -111,18 +115,96 @@ This project covers the implementation of Spring Security with JWT authenticatio
 9. **JWT Refresh Token and Access Token-Based Authentication**
    - Implementing refresh token mechanism for session management.
    - Handling token expiration and renewal process.
+     <br><br>
+     Steps -> [JWT and Refresh Token.pdf](https://github.com/user-attachments/files/18875841/JWT.and.Refresh.Token.pdf)
+<br>
+**Executions ->**
+1.Login the User and Generate 2 Tokens ->
+<br>
+
+![00 login the User and generate 2 Tokens ](https://github.com/user-attachments/assets/e46aba2b-1587-4fa5-951c-ebdc40d73deb)
+
+2.With the help of stored refresh Cookie generate a newly access token ->
+<br>
+![01 with the help of stored refresh Cookie generate a newly access token](https://github.com/user-attachments/assets/acf5e240-d6cc-48ea-837a-29afda7450e8)
+
+3.Generating newly access token with cookies valid  Refresh token
+
+![02 Generating newly access token with cookies valid  Refresh token ](https://github.com/user-attachments/assets/fa75aa53-0a67-4f9b-9f8d-e468933dbbb3)
+
+4.AccessTokenLookLikes
+<br>
+![03 AccessTokenLookLikes](https://github.com/user-attachments/assets/d3932c76-65e6-47f1-b940-9f9584fde49f)
+
+5.RefreshTokenLooksLike
+<br>
+![04 RefreshTokenLooksLike](https://github.com/user-attachments/assets/8398fa7e-5a8c-467a-8555-63311ffe3352)
+
 
 10. **Google OAuth2 Client in Spring Security**
    - Implementing Google OAuth2 authentication.
    - Integrating Spring Security with OAuth2 login flow.
+     <br><br>
+     Steps -> [OAuth2Client - GOOGLE.pdf](https://github.com/user-attachments/files/18875843/OAuth2Client.-.GOOGLE.pdf)
+  **Executions ->**
+1.Hits the login Request 'http://localhost:8080/login'-> 
+<br>
+![13 hit the request -login](https://github.com/user-attachments/assets/dcb0aaf6-67f0-4a69-878c-c32d0874e9fd)
+
+2.For Registration Click Your respective Google Account ->
+<br>
+![14  we are got to our spring security app](https://github.com/user-attachments/assets/145ba61a-4b37-4bc7-a279-75d7c5857b3b)
+
+3.Read the Terms and Conditions and Proceed to Continue ->
+<br>
+![15 click your email and continue](https://github.com/user-attachments/assets/55d4c159-9482-48e8-ab8f-b2b9669e87c3)
+
+4.When you Click continue And Your Authentication done  ->
+<br>
+![17 Successfully Response give back to our application with accessToken ](https://github.com/user-attachments/assets/0716ecb9-166a-45b9-bf49-3e866a744e94)
+
+5.You can see the Console the info get Properly and also generate a JWT Token ->
+<br>
+![16  retrieve email with OAuth2SuccessHandler](https://github.com/user-attachments/assets/0e9e77f1-4f56-45f4-a58d-39721baeff59)
+
+6.JWT Token VERIFIED ->
+<br>
+![18 this is your valid token ](https://github.com/user-attachments/assets/80eca843-0410-4d32-a659-6186188fa53c)
+
+7.Also Successfully Saved in Your data in Database -> 
+<br>
+![19 In Db we successfully Save the Information of OAuth2Client](https://github.com/user-attachments/assets/81d9cce0-ba8e-4ea4-aa58-dd9ee06056e6)
 
 11. **User Session Management With JWT**
    - Stateless authentication using JWT.
    - Managing user sessions securely.
+     <br><br>
+      Steps -> [Session Management in Spring Security.pdf](https://github.com/user-attachments/files/18875847/Session.Management.in.Spring.Security.pdf)
+<br><br>
+     **Executions ->**
+     1.Login the user and Created a Active Session ->
+     <br>
+     ![20 LoginRequest with save token in Db (see time)](https://github.com/user-attachments/assets/8771e085-ee37-4eef-8951-b58e92c1faa3)
+
+     2.User Session Saved in Database ->
+     <br>
+     ![21 Add JWT Token In DB So that Session is Active anytime](https://github.com/user-attachments/assets/d846c4fe-5e73-4694-9605-314bf0010734)
+
+     
 
 12. **Role-Based Authorization**
    - Implementing role-based access control (RBAC).
    - Assigning user roles dynamically.
+     <br><br>
+     Steps -> [Role Based Authorization And Granular based Authorization and Security Annotations.pdf](https://github.com/user-attachments/files/18875857/Role.Based.Authorization.And.Granular.based.Authorization.and.Security.Annotations.pdf)
+
+     **Executions ->**
+1.With the help of database Record You can understand who is ADMIN,CREATOR,USER
+<br>
+
+![00 tables](https://github.com/user-attachments/assets/5f792f22-6a2f-4cdd-91f5-ea4d9d924e18)
+
+
 
 13. **Granular Authorization with Authorities and Permissions**
    - Using authorities and permissions for fine-grained access control.
@@ -131,11 +213,6 @@ This project covers the implementation of Spring Security with JWT authenticatio
 14. **Security Method Annotations - @Secured and @PreAuthorize**
    - Using `@Secured` and `@PreAuthorize` annotations for securing methods.
    - Difference between `@Secured` and `@PreAuthorize`.
-
----
-
-### **Execution Screenshot**
-(Screenshot attached here)
 
 ---
 
@@ -148,16 +225,12 @@ This project covers the implementation of Spring Security with JWT authenticatio
 ### **Steps to Run**
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/ARONAGENT/Spring_Security_All.git)
    cd <repository-folder>
    ```
 2. **Run the Spring Boot Application**
    ```bash
    ./mvnw spring-boot:run
-   ```
-   or if using Gradle:
-   ```bash
-   ./gradlew bootRun
    ```
 
 3. **Access the Application**
