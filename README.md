@@ -31,6 +31,7 @@ This project covers the implementation of Spring Security with JWT authenticatio
 4. **Spring Security Web Configuration - SecurityFilterChain**
    - Configuring `SecurityFilterChain` using Java configuration.
    - Defining security rules for endpoints.
+     <br>
    **Add Custom Security Filter -> Logging Filter**
      *Execution->*
      ![19 LoggingFilter Add In SecurityFilterChain-- Working Fine](https://github.com/user-attachments/assets/fab314ba-6c58-4643-b262-54ddc15ca05f)
@@ -144,11 +145,15 @@ This project covers the implementation of Spring Security with JWT authenticatio
 10. **Google OAuth2 Client in Spring Security**
    - Implementing Google OAuth2 authentication.
    - Integrating Spring Security with OAuth2 login flow.
-     <br><br>
      Steps -> [OAuth2Client - GOOGLE.pdf](https://github.com/user-attachments/files/18875843/OAuth2Client.-.GOOGLE.pdf)
+
+     <br>
+     
   **Executions ->**
+  <br>
 1.Hits the login Request 'http://localhost:8080/login'-> 
 <br>
+
 ![13 hit the request -login](https://github.com/user-attachments/assets/dcb0aaf6-67f0-4a69-878c-c32d0874e9fd)
 
 2.For Registration Click Your respective Google Account ->
@@ -225,8 +230,8 @@ This project covers the implementation of Spring Security with JWT authenticatio
 ### **Steps to Run**
 1. **Clone the Repository**
    ```bash
-   git clone (https://github.com/ARONAGENT/Spring_Security_All.git)
-   cd <repository-folder>
+   git clone https://github.com/ARONAGENT/Spring_Security_All.git
+   cd Spring_Security_All 
    ```
 2. **Run the Spring Boot Application**
    ```bash
